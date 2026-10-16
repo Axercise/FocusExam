@@ -58,6 +58,8 @@ textarea{width:100%;min-height:96px;resize:vertical;margin:4px 0 12px}
 .en .m{display:flex;justify-content:space-between;color:var(--mu);font-size:12.5px;margin-bottom:6px}
 .en textarea{min-height:56px;margin:0;font-size:14px}
 .em{color:var(--mu);text-align:center;padding:14px 0}
+#oA .cd{text-align:center;padding:32px 22px;width:min(340px,100%)}
+#oA p{color:var(--mu);margin:6px 0 24px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
@@ -81,6 +83,8 @@ textarea{width:100%;min-height:96px;resize:vertical;margin:4px 0 12px}
   <div class="r" style="margin-top:12px"><input type="text" class="nm" id="nn" placeholder="ชื่อวิชาใหม่"><button class="sm" id="na">เพิ่มวิชา</button></div>
   <div class="sec"><label for="bk">เวลาพักต่อรอบ (นาที)</label><input type="number" class="n" id="bk" min="0" max="120"></div>
 </div></div>
+
+<div class="ov" id="oA"><div class="cd"><h2 id="at" style="justify-content:center;font-size:20px;margin:0"></h2><p id="ap"></p><button class="b p" id="aok">หยุดแจ้งเตือน</button></div></div>
 
 <div class="ov" id="oN"><div class="cd">
   <h2 id="nh">บันทึกการเรียนรู้</h2>
@@ -129,17 +133,33 @@ function draw(){
   else fin.hidden=true;
   document.title=T.run?`${t} · Study Timer`:'Study Timer';
 }
-function beep(){try{const a=new(window.AudioContext||window.webkitAudioContext)(),o=a.createOscillator(),g=a.createGain();o.connect(g);g.connect(a.destination);o.frequency.value=660;g.gain.setValueAtTime(.15,a.currentTime);g.gain.exponentialRampToValueAtTime(.001,a.currentTime+1.4);o.start();o.stop(a.currentTime+1.4)}catch(e){}}
-function start(){if(!T.total||T.run)return;if(T.left<=0)T.left=T.total;T.run=true;T.end=Date.now()+T.left;draw()}
+let AC=null,alarm=null;
+function ctx(){try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();if(AC.state==='suspended')AC.resume()}catch(e){}return AC}
+function beep(){
+  const a=ctx();if(!a)return;
+  [0,.3].forEach(d=>{const o=a.createOscillator(),g=a.createGain(),t=a.currentTime+d;o.connect(g);g.connect(a.destination);o.frequency.value=d?784:660;g.gain.setValueAtTime(.18,t);g.gain.exponentialRampToValueAtTime(.001,t+.25);o.start(t);o.stop(t+.25)});
+  try{navigator.vibrate&&navigator.vibrate(200)}catch(e){}
+}
+function startAlarm(){
+  stopAlarm();beep();alarm=setInterval(beep,1400);
+  const brk=T.mode==='break';
+  $('#at').textContent=brk?'หมดเวลาพักแล้ว':'หมดเวลาอ่านแล้ว';
+  $('#ap').textContent=brk?'พร้อมกลับไปอ่านต่อ':(cur()?cur().name:'');
+  $('#oA').classList.add('on');document.title='⏰ หมดเวลา!';
+  setTimeout(()=>$('#aok').focus(),50);
+}
+function stopAlarm(){clearInterval(alarm);alarm=null;$('#oA').classList.remove('on')}
+function start(){if(!T.total||T.run)return;ctx();if(T.left<=0)T.left=T.total;T.run=true;T.end=Date.now()+T.left;draw()}
 function stop(){if(!T.run)return;T.left=Math.max(0,T.end-Date.now());T.run=false;draw()}
 setInterval(()=>{if(!T.run)return;T.left=Math.max(0,T.end-Date.now());draw();if(T.left<=0)done()},250);
 
 let pend=null;
-function done(){
-  T.run=false;beep();
+function done(){T.run=false;draw();startAlarm()}
+$('#aok').onclick=()=>{
+  stopAlarm();draw();
   if(T.mode==='break'){load();return}
   openNote(Math.round(T.total/1000),true);
-}
+};
 function openNote(secs,withBreak){
   const c=cur();pend={secs,name:c?c.name:'-',sid:S.sel,withBreak};
   $('#ns').textContent=`${pend.name} · ${dur(secs)}`;$('#nt').value='';
