@@ -1,0 +1,51 @@
+/* A Track's selected color controls its frame independently of the website palette. */
+[data-track-color=mint]{--track-accent:#109766}
+[data-track-color=blue]{--track-accent:#4283d2}
+[data-track-color=peach]{--track-accent:#d28c58}
+[data-track-color=lavender]{--track-accent:#a078cc}
+[data-track-color=rose]{--track-accent:#d26086}
+[data-track-color=amber]{--track-accent:#bd880a}
+[data-track-color=teal]{--track-accent:#218f86}
+[data-track-color=slate]{--track-accent:#7c8ba0}
+[data-track-color=lime]{--track-accent:#91a33f}
+[data-track-color=midnight]{--track-accent:#6576cf}
+[data-track-color=coral]{--track-accent:#db5d50}
+[data-track-color=gold]{--track-accent:#c7a146}
+:root[data-theme=dark] [data-track-color=mint]{--track-accent:#40dba3}
+:root[data-theme=dark] [data-track-color=blue]{--track-accent:#77aceb}
+:root[data-theme=dark] [data-track-color=peach]{--track-accent:#e2ad83}
+:root[data-theme=dark] [data-track-color=lavender]{--track-accent:#bba0e0}
+:root[data-theme=dark] [data-track-color=rose]{--track-accent:#e88daa}
+:root[data-theme=dark] [data-track-color=amber]{--track-accent:#d6b153}
+:root[data-theme=dark] [data-track-color=teal]{--track-accent:#60c3b6}
+:root[data-theme=dark] [data-track-color=slate]{--track-accent:#9eafc4}
+:root[data-theme=dark] [data-track-color=lime]{--track-accent:#b7cd70}
+:root[data-theme=dark] [data-track-color=midnight]{--track-accent:#8b9be8}
+:root[data-theme=dark] [data-track-color=coral]{--track-accent:#f08c7d}
+:root[data-theme=dark] [data-track-color=gold]{--track-accent:#dfc476}
+
+:is(.personal-track-card,.dashboard-personal-track)[data-track-color]{
+  border-color:color-mix(in srgb,var(--track-accent) 72%,var(--line));
+  box-shadow:0 0 0 1px color-mix(in srgb,var(--track-accent) 8%,transparent),var(--shadow);
+  transition:border-color .2s ease,box-shadow .2s ease,translate .2s ease;
+}
+:is(.personal-track-card,.dashboard-personal-track)[data-track-color]:is(:hover,:focus-within){
+  border-color:var(--track-accent);
+  box-shadow:0 0 0 1px color-mix(in srgb,var(--track-accent) 24%,transparent),0 0 30px color-mix(in srgb,var(--track-accent) 25%,transparent),0 8px 24px color-mix(in srgb,var(--track-accent) 13%,transparent);
+  translate:0 -2px;
+}
+.personal-track-card[data-track-color] .track-title-link:focus-visible::after,
+.dashboard-personal-track[data-track-color]:focus-visible{outline-color:var(--track-accent)}
+
+/* Keep these swatches true to their chosen colors on seasonal website themes too. */
+.track-color-mint{background:#e9f7ef;color:#087849}
+.track-color-blue{background:#e7f0fd;color:#426f8a}
+.track-color-peach{background:#fff0e4;color:#93602f}
+:root[data-theme=dark] .track-color-mint{background:#142f26;color:#63e6b6}
+:root[data-theme=dark] .track-color-blue{background:#20314b;color:#a5cbdf}
+:root[data-theme=dark] .track-color-peach{background:#443024;color:#e2ba88}
+
+@media(prefers-reduced-motion:reduce){
+  :is(.personal-track-card,.dashboard-personal-track)[data-track-color]{transition:none}
+  :is(.personal-track-card,.dashboard-personal-track)[data-track-color]:is(:hover,:focus-within){translate:none}
+}

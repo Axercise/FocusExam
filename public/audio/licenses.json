@@ -1,0 +1,47 @@
+[
+  {
+    "id": "rain",
+    "title": "gentle rainfall.wav",
+    "author": "rasunter255",
+    "page": "https://freesound.org/people/rasunter255/sounds/416227/",
+    "file": "https://cdn.freesound.org/previews/416/416227_5438412-hq.mp3",
+    "license": "CC0-1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "verifiedAt": "2026-11-07T17:44:41.409Z",
+    "sourceSha256": "bb3eb5cfe6e60d9ac355302f5706849bc118b1e4b4fc561258f1f5bef65dd963",
+    "asset": "/audio/rain.mp3",
+    "assetSha256": "3efaf248554445ff7d22229f287fba7963246270726015327a80f73167d0c279",
+    "bytes": 708956,
+    "processing": "Public HQ preview; first 60 seconds; 1-second tail/head crossfade forming a 59-second loop; loudness normalized to -20 LUFS; mono 32 kHz MP3 96 kbps."
+  },
+  {
+    "id": "ocean",
+    "title": "Ocean waves mono.mp3",
+    "author": "tec_studio",
+    "page": "https://freesound.org/people/tec_studio/sounds/232186/",
+    "file": "https://cdn.freesound.org/previews/232/232186_1431924-hq.mp3",
+    "license": "CC0-1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "verifiedAt": "2026-11-07T17:45:01.408Z",
+    "sourceSha256": "eae242d8053430dd94b39d5896a388497b6670f6a8ca08a30c89e5ff8b25a029",
+    "asset": "/audio/ocean.mp3",
+    "assetSha256": "ee3e62e839ced6fa97fe1e8aa609a454417e463b0402b5432acb664c7ff84c49",
+    "bytes": 708956,
+    "processing": "Public HQ preview; first 60 seconds; 1-second tail/head crossfade forming a 59-second loop; loudness normalized to -20 LUFS; mono 32 kHz MP3 96 kbps."
+  },
+  {
+    "id": "noise",
+    "title": "White noise",
+    "author": "theundecided",
+    "page": "https://freesound.org/people/theundecided/sounds/165058/",
+    "file": "https://cdn.freesound.org/previews/165/165058_947433-hq.mp3",
+    "license": "CC0-1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "verifiedAt": "2026-11-07T17:46:35.259Z",
+    "sourceSha256": "5aca5a2faa33784956d489816cd2f82731e751da890c4283436c7e31ae988927",
+    "asset": "/audio/noise.mp3",
+    "assetSha256": "b9f17bf2ead06da1b18d6b2553ae45c5429e17015d713436fba551a7230763ee",
+    "bytes": 708956,
+    "processing": "Public HQ preview; first 60 seconds; 1-second tail/head crossfade forming a 59-second loop; loudness normalized to -20 LUFS; mono 32 kHz MP3 96 kbps."
+  }
+]

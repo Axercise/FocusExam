@@ -1,0 +1,53 @@
+.goals-page .tracks-main{max-width:1000px}
+.goals-date-panel{padding:23px;margin-bottom:25px}
+.goals-date-nav{display:flex;align-items:center;gap:14px}
+.goals-date-nav>div{flex:1;min-width:0}.goals-date-nav h2{font-size:19px;font-weight:650}.goals-date-nav p{font-size:12px;color:var(--muted);margin-top:4px}
+.goals-date-nav>.account-tool{border:1px solid var(--line);border-radius:10px;min-width:39px;justify-content:center}
+.goals-date-form{display:flex;align-items:end;gap:13px;margin-top:22px}
+.goals-date-form label{display:flex;flex-direction:column;gap:7px;flex:1;font-size:12px;color:var(--muted)}
+.goals-date-form input,.goal-form select{font:inherit;font-size:14px;min-height:44px;border:1px solid var(--line);border-radius:10px;padding:9px 12px;background:var(--surface);color:var(--text);width:100%;min-width:0}
+.goals-date-form input:focus-visible,.goal-form select:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+.goals-date-note{color:var(--muted);font-size:12px;line-height:1.9;margin-top:13px}
+.goals-content{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:25px;box-shadow:var(--shadow)}
+.goal-progress-summary{margin:8px 0 20px}.goal-progress-summary>div:first-child{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+.goal-progress-summary span{font-size:12px;color:var(--muted)}.goal-progress-summary strong{font-size:21px;font-weight:650;font-variant-numeric:tabular-nums}
+.real-goal-progress{height:5px;width:100%;border-radius:10px;background:var(--line);overflow:hidden}
+.real-goal-progress>span{display:block;height:100%;background:var(--green);border-radius:10px;transition:width .25s ease}
+.real-goal-list{list-style:none;padding:0;margin:0}
+.real-goal-row{display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:10px;align-items:start;border-bottom:1px solid var(--line);padding:17px 0}
+.real-goal-row:last-child{border-bottom:0}
+.goal-toggle-form{position:relative}
+.real-goal-checkbox{display:grid;place-items:center;width:36px;height:36px;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:10px;margin:0}
+.real-goal-checkbox:hover{border-color:var(--green);box-shadow:0 0 14px var(--glow)}
+.real-goal-checkbox.done{background:var(--green-dark);border-color:var(--green-dark);color:#fff}
+:root[data-theme=dark] .real-goal-checkbox.done{background:var(--green);color:var(--bg)}
+.real-goal-checkbox:disabled{opacity:.5}
+.real-goal-text{padding-top:4px;min-width:0}.real-goal-text p{font-size:14px;overflow-wrap:anywhere;line-height:1.8}
+.real-goal-text>span{display:inline-block;font-size:11px;overflow-wrap:anywhere;color:var(--green-dark);margin-top:5px;padding:2px 8px;background:var(--mint);border-radius:6px}
+.is-done .real-goal-text p{color:var(--muted);text-decoration:line-through}
+.real-goal-tools{display:flex;gap:5px}.real-goal-tools .track-icon-button{width:36px;height:36px}
+.goal-row-error{position:absolute;z-index:3;top:40px;left:0;width:230px;max-width:calc(100vw - 100px);padding:8px 10px;background:var(--surface);color:var(--text);border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);font-size:12px}
+.goal-success{font-size:12px;color:var(--green-dark);padding:9px 12px;background:var(--mint);border:1px solid var(--line);border-radius:9px;margin-bottom:12px}
+.goals-empty{text-align:center;padding:35px 15px;color:var(--muted)}
+.goals-empty svg{margin:0 auto 12px;color:var(--green)}.goals-empty h2{font-size:18px;color:var(--text);font-weight:600}.goals-empty p{font-size:13px;margin:7px auto 0;max-width:350px;line-height:1.9}
+.goal-collection-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:17px}
+.goals-manage-link{display:flex;align-items:center;gap:5px;color:var(--green-dark);font-size:12px}
+.goal-manual-note{font-size:11px;color:var(--muted);margin-top:18px;line-height:1.8}
+.add-goal-real{display:flex;justify-content:center;align-items:center;gap:7px;border:1px dashed var(--line);border-radius:9px;min-height:40px;width:100%;color:var(--green-dark);background:transparent;font-size:12px}
+.add-goal-real:hover{background:var(--mint);border-color:var(--green)}
+.real-goals.goals-card .goal-progress-summary{margin-top:17px}.real-goals.goals-card .goal-progress-summary strong{font-size:17px}
+.real-goals.goals-card .real-goal-row{grid-template-columns:32px minmax(0,1fr);gap:9px;padding:12px 0}
+.real-goals.goals-card .real-goal-checkbox{width:29px;height:29px;border-radius:8px}
+.real-goals.goals-card .real-goal-text{padding-top:0}.real-goals.goals-card .real-goal-text p{font-size:12px}
+.real-goals.goals-card .goals-empty{padding:24px 5px}.real-goals.goals-card .goals-empty h2{font-size:15px}.real-goals.goals-card .goals-empty p{font-size:12px}
+.real-goals.goals-card .goal-collection-footer{gap:13px}
+.goal-load-more{margin-top:12px;min-height:35px;color:var(--green-dark)}
+.goal-delete-dialog{padding:26px}.goal-delete-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.goal-delete-heading h2{font-size:20px}.goal-delete-dialog>p{font-size:13px;color:var(--muted);margin-top:10px}
+.goal-delete-dialog blockquote{margin:16px 0;padding:12px 15px;background:var(--bg);border-left:3px solid var(--green);border-radius:7px;font-size:14px;overflow-wrap:anywhere}
+.goal-delete-submit{color:#b83c44}
+:root[data-theme=dark] .goal-delete-submit{color:#ff9caa}
+.goals-history-note{text-align:center;margin-top:22px}
+@media(max-width:740px){.goals-date-panel,.goals-content{padding:19px}.goals-date-nav{gap:9px}.goals-date-nav h2{font-size:17px}.goals-date-nav p{font-size:11px}.real-goal-row{gap:7px;grid-template-columns:36px minmax(0,1fr) auto}.real-goal-tools{flex-direction:column;gap:3px}.real-goal-checkbox{width:32px;height:34px}.goals-date-nav>.track-secondary{padding:9px 13px}}
+@media(max-width:460px){.goals-date-nav{flex-wrap:wrap}.goals-date-nav>div{flex-basis:65%}.goals-date-nav>.track-secondary{margin-left:auto}.goals-date-form{flex-wrap:wrap}.goals-date-form>label{flex-basis:100%}.goals-date-form>button{width:100%}.real-goal-text p{font-size:13px}.goal-dialog .track-dialog-heading{gap:10px}.goal-dialog .track-dialog-heading h2{font-size:19px}.goal-dialog .track-dialog-actions{flex-wrap:wrap}.goal-dialog .track-dialog-actions>button{flex:1;min-width:100px}}
+@media(prefers-reduced-motion:reduce){.real-goal-progress>span{transition:none}}

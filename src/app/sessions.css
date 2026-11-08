@@ -1,0 +1,44 @@
+.timer-display>.timer-number-part{position:static;top:auto;margin:0;color:inherit}
+.timer-display .timer-colon{position:relative;top:-4px;color:var(--plant);margin:0 2px}
+.timer-display.timer-stopwatch{font-size:calc(clamp(42px,14vw,72px) * 8 / var(--timer-digits,8));white-space:nowrap}
+.is-expanded .timer-display.timer-stopwatch{font-size:calc(clamp(46px,min(12vw,20dvh),180px) * 8 / var(--timer-digits,8))}
+.timer-modes{max-width:100%}.timer-modes button{padding:7px 12px}
+.timer-lockin-note{display:flex;justify-content:center;align-items:center;gap:7px;position:relative;z-index:1;color:var(--green-dark)!important;margin:11px auto 0!important;font-size:11px!important;flex-shrink:0}
+.timer-time-fields{align-items:flex-end!important;flex-wrap:wrap}
+.timer-time-fields>label{width:66px;margin:0}.timer-time-fields input{width:100%;margin-top:5px;text-align:center}
+.timer-time-fields>span{font-size:19px;line-height:38px}.timer-time-fields>button{margin-left:auto;min-width:110px}
+.timer-command-error{position:relative;z-index:1;padding:10px 12px;background:var(--peach);border-radius:8px;color:var(--text)!important;font-size:11px!important;margin:14px auto 0!important;max-width:370px;flex-shrink:0}
+.session-save-panel,.session-save-note,.session-saved{position:relative;z-index:1;margin:17px auto 0;width:100%;max-width:390px;background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:17px;text-align:left;flex-shrink:0}
+.session-save-panel h3{display:flex;gap:8px;align-items:center;font-size:14px;color:var(--green-dark);font-weight:600;margin:0 0 16px}
+.session-save-panel form{display:grid;gap:8px}
+.session-save-panel label{font-size:12px;font-weight:600}
+.session-save-panel select,.session-save-panel textarea{width:100%;min-width:0;background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:8px;font:inherit;padding:9px 10px;min-height:42px;font-size:12px}
+.session-save-panel textarea{resize:vertical;min-height:85px;max-height:200px}
+.session-save-panel select:focus-visible,.session-save-panel textarea:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+.session-save-panel p,.session-save-note p{font-size:11px;color:var(--muted);line-height:1.8;margin:0}
+.session-track-tools{display:flex;gap:8px;justify-content:space-between;flex-wrap:wrap;margin-bottom:9px}
+.session-track-tools a,.session-track-tools button,.session-load-more{display:inline-flex;align-items:center;gap:5px;color:var(--green-dark);font-size:10px;min-height:30px;background:transparent;border:0;padding:2px 0}
+.session-save-button{display:flex;gap:8px;align-items:center;justify-content:center;width:100%;border:1px solid var(--green-dark);border-radius:9px;background:var(--green-dark);color:var(--surface);font-size:12px;min-height:43px;padding:9px 13px;margin-top:7px}
+:root[data-theme=dark] .session-save-button{color:var(--bg)}
+.session-save-button:disabled{opacity:.5}
+.session-save-note{font-size:12px;line-height:1.8}
+.session-save-note a,.session-saved a{display:block;color:var(--green-dark);font-size:11px;margin-top:7px;text-decoration:underline;text-underline-offset:3px}
+.session-saved{display:flex;align-items:flex-start;gap:10px;background:var(--mint);border-color:var(--plant-fill);color:var(--green-dark)}
+.session-saved strong{font-size:13px;font-weight:600;overflow-wrap:anywhere}
+.session-error{color:#a84e43!important;background:var(--peach);padding:8px 10px;border-radius:7px}
+:root[data-theme=dark] .session-error{color:#f5b3a8!important}
+.study-history-link{display:flex;align-items:center;justify-content:center;gap:6px;color:var(--green-dark);font-size:12px;padding:9px;margin-top:9px;min-height:35px}
+.personal-track-saved-time{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;padding:11px 0 15px;font-size:11px;color:var(--muted)}
+.personal-track-saved-time strong{font-size:17px;font-weight:600;letter-spacing:.3px;font-variant-numeric:tabular-nums;color:var(--green-dark)}
+.dashboard-saved-time{display:flex;flex-direction:column;gap:3px;padding-top:12px;margin-top:14px;border-top:1px solid var(--line);grid-column:2}
+.dashboard-saved-time small{font-size:10px;color:var(--muted)}
+.dashboard-saved-time b{font-size:16px;font-weight:600;font-variant-numeric:tabular-nums;color:var(--green-dark)}
+.session-history-list{display:grid;gap:16px}
+.session-history-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:23px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:15px}
+.session-history-card h2{font-size:18px;font-weight:600;overflow-wrap:anywhere}
+.session-history-mode{color:var(--green-dark);font-size:10px}
+.session-history-card>div>span:last-child{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);margin-top:5px}
+.session-history-card>strong{font-size:25px;letter-spacing:.4px;align-self:center;font-variant-numeric:tabular-nums;color:var(--green-dark);font-weight:500}
+.session-history-card>p{grid-column:1/-1;font-size:13px;white-space:pre-wrap;overflow-wrap:anywhere;border-top:1px solid var(--line);padding-top:14px;color:var(--muted)}
+@media(max-width:460px){.timer-modes button{padding:7px 9px;font-size:10px;gap:4px}.session-save-panel,.session-save-note,.session-saved{padding:15px 13px}.session-history-card{padding:19px;grid-template-columns:1fr;gap:10px}.session-history-card>strong{font-size:24px}}
+@media(max-height:500px){.is-expanded .timer-lockin-note{display:flex!important;font-size:10px!important;margin-top:3px!important}.is-expanded .session-save-panel{max-width:420px}}

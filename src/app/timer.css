@@ -1,0 +1,59 @@
+.focus-card{padding-bottom:120px;min-height:650px}
+.focus-card .garden{height:108px;z-index:0}
+.timer-display.timer-wide{font-size:min(92px,18vw)}
+.timer-modes button{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--green-dark);padding:7px 16px;border-radius:20px;border:0;background:transparent}
+.timer-modes button:disabled{cursor:default}.timer-modes button:not(.selected):disabled{opacity:.55}
+.timer-sound-button{width:36px;height:38px;display:grid;place-items:center;border:1px solid var(--plant-fill);border-radius:10px;background:var(--surface);color:var(--green-dark)}
+.timer-sound-button[aria-pressed=false]{color:var(--muted)}.timer-sound-button:disabled{opacity:.5}
+.focus-card .timer-status-text{font-size:12px;color:var(--green-dark);margin-top:2px;min-height:20px}
+.timer-progress{position:relative;z-index:1;width:min(230px,80%);height:4px;border-radius:20px;background:var(--hill-back);margin:13px auto 0;overflow:hidden;flex-shrink:0}
+.timer-progress>span{display:block;height:100%;background:var(--green);border-radius:20px;transition:width .2s linear}
+.timer-main-controls{display:flex;justify-content:center;align-items:stretch;gap:9px;margin:21px auto 0;position:relative;z-index:1;flex-shrink:0}
+.timer-main-controls .start-button{margin:0;min-width:150px;padding:11px 19px}
+.timer-finish{display:flex;align-items:center;justify-content:center;gap:6px;min-height:43px;padding:9px 13px;border:1px solid var(--plant-fill);border-radius:10px;background:var(--surface);color:var(--green-dark);font-size:12px}
+.timer-finish:disabled{opacity:.5}.timer-main-controls .start-button:disabled{opacity:.65}
+.timer-reset{position:relative;z-index:1;display:inline-flex;align-items:center;justify-content:center;gap:6px;margin:13px auto 0;border:0;background:transparent;color:var(--green-dark);font-size:11px;min-height:33px;padding:4px 10px;flex-shrink:0}
+.timer-duration-settings{position:relative;z-index:1;max-width:350px;width:100%;margin:17px auto 0;flex-shrink:0}
+.timer-presets{display:flex;gap:7px;justify-content:center;flex-wrap:wrap}
+.timer-presets>button{background:var(--surface);border:1px solid var(--line);color:var(--green-dark);padding:5px 13px;font-size:11px;border-radius:20px;min-height:33px}
+.timer-presets>button[aria-pressed=true]{border-color:var(--green);background:var(--mint)}
+.timer-custom{font-size:11px;margin-top:11px;color:var(--green-dark)}
+.timer-custom>summary{cursor:pointer;list-style:revert;width:fit-content;margin:auto;padding:4px 8px;min-height:30px;border-radius:6px}
+.timer-custom>summary:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+.timer-custom>form{margin-top:10px;text-align:left;border:1px solid var(--line);border-radius:11px;background:var(--surface);padding:12px}
+.timer-custom label{display:block;font-size:11px;font-weight:600;margin-bottom:6px}
+.timer-custom form>div{display:flex;align-items:center;gap:8px}
+.timer-custom input{width:76px;min-width:0;min-height:38px;font:inherit;background:var(--bg);color:var(--text);border:1px solid var(--line);padding:6px 8px;border-radius:7px}
+.timer-custom input:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+.timer-custom form button{display:flex;gap:5px;align-items:center;justify-content:center;margin-left:auto;background:var(--mint);border:1px solid var(--line);color:var(--green-dark);border-radius:7px;font-size:11px;padding:6px 9px;min-height:38px}
+.timer-custom form>p{font-size:10px;margin-top:6px;color:var(--muted)}.timer-custom form>p.timer-field-error{color:#aa5144}
+:root[data-theme=dark] .timer-custom form>p.timer-field-error{color:#f5b3a8}
+.focus-card .timer-local-note{font-size:11px;line-height:1.8;max-width:350px;margin:16px auto 0;color:var(--green-dark);position:relative;z-index:1}
+.focus-card .timer-background-note{font-size:10px;margin:6px auto 0;max-width:350px;position:relative;z-index:1;color:var(--muted)}
+.focus-card .timer-storage-notice{position:relative;z-index:1;font-size:11px;color:#986338;background:var(--peach);border-radius:8px;padding:8px 11px;margin:13px auto 0;max-width:350px}
+:root[data-theme=dark] .focus-card .timer-storage-notice{color:#e2ba88}
+.timer-completion{position:relative;z-index:1;max-width:370px;margin:17px auto 0;background:var(--surface);border:1px solid var(--plant-fill);border-radius:13px;padding:15px 17px;color:var(--green-dark);flex-shrink:0}
+.timer-completion>svg{margin:0 auto 7px}.timer-completion strong{font-size:13px;display:block;line-height:1.8}
+.timer-completion p{font-size:11px;margin-top:5px}.timer-completion b{font-size:16px;font-variant-numeric:tabular-nums;margin-left:8px;font-weight:600}
+.timer-reset-dialog{width:min(430px,calc(100vw - 32px));max-height:calc(100dvh - 32px);overflow:auto;margin:auto;padding:26px;border:1px solid var(--line);border-radius:18px;background:var(--surface);color:var(--text);text-align:left;box-shadow:0 20px 90px #0003}
+.timer-reset-dialog::backdrop{background:#112c2566;backdrop-filter:blur(3px)}
+.timer-reset-dialog>svg{color:var(--green)}.timer-reset-dialog h2{font-size:20px;margin:13px 0 8px;line-height:1.6}
+.timer-reset-dialog>p{font-size:13px;color:var(--muted);line-height:1.8}
+.timer-reset-dialog>div{display:flex;justify-content:flex-end;gap:9px;margin-top:22px}
+.timer-reset-dialog button{font-size:12px;padding:10px 13px;min-height:43px;border-radius:9px}
+.timer-dialog-cancel{background:var(--bg);border:1px solid var(--line);color:var(--text)}
+.timer-dialog-confirm{background:var(--green-dark);border:1px solid var(--green-dark);color:var(--surface)}
+:root[data-theme=dark] .timer-dialog-confirm{color:var(--bg)}
+.focus-card.is-expanded{padding:77px 24px 58px;min-height:0}
+.is-expanded .focus-top{position:fixed;z-index:3;background:var(--focus);padding-bottom:8px}
+.is-expanded .timer-display{font-size:clamp(80px,min(26vw,24dvh),240px);margin-top:7px}
+.is-expanded .timer-display.timer-wide{font-size:clamp(66px,min(20vw,22dvh),200px)}
+.is-expanded .timer-main-controls{margin-top:19px}.is-expanded .timer-reset{margin-top:8px}
+.is-expanded .timer-local-note{max-width:550px}
+.is-expanded .timer-background-note{display:none}
+.is-expanded .timer-duration-settings{margin-top:13px}
+.is-expanded .timer-completion{margin-top:13px;padding:11px 17px}
+@media(max-width:460px){.focus-card{padding-left:17px;padding-right:17px;min-height:640px}.timer-main-controls{gap:8px}.timer-main-controls .start-button{min-width:140px;padding:11px 15px;font-size:12px}.timer-finish{padding:9px 10px;font-size:11px}.timer-modes button{padding:7px 12px;font-size:10px}.focus-card .timer-local-note{font-size:10px;max-width:290px}.timer-custom input{width:67px}.timer-reset-dialog{padding:23px 20px}.timer-reset-dialog>div{flex-wrap:wrap}.timer-reset-dialog button{flex:1;white-space:nowrap}.focus-actions{gap:7px}}
+@media(max-height:600px){.is-expanded .timer-display{font-size:min(20vw,22dvh)}.is-expanded .timer-main-controls{margin-top:10px}.is-expanded .timer-duration-settings{margin-top:8px}.is-expanded .timer-completion{padding:9px 13px;margin-top:9px}.is-expanded .timer-completion>svg{display:none}}
+@media(max-height:500px){.focus-card.is-expanded{padding-top:67px;padding-bottom:40px}.is-expanded .timer-progress{margin-top:6px}.is-expanded .timer-main-controls{margin-top:9px}.is-expanded .timer-modes{margin-top:0}.is-expanded .timer-reset{margin-top:3px;min-height:28px}.is-expanded .timer-completion strong{font-size:12px}.is-expanded .timer-completion p{margin-top:2px}.is-expanded .timer-duration-settings{max-width:320px}.is-expanded .timer-presets>button{min-height:29px;padding:3px 12px}.is-expanded .timer-custom{margin-top:2px}}
+@media(prefers-reduced-motion:reduce){.timer-progress>span{transition:none}}

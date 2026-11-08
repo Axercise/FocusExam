@@ -1,0 +1,46 @@
+.ambient-panel{padding:22px}.ambient-intro{font-size:12px;color:var(--muted);line-height:1.8;margin-top:8px}
+.ambient-cc0{font-size:10px;color:var(--muted);border:1px solid var(--line);padding:2px 7px;border-radius:7px;letter-spacing:.5px}
+.ambient-controls{min-width:0;text-align:left}.ambient-sounds{display:grid;gap:9px;margin-top:20px}
+.ambient-sound{display:flex;align-items:center;gap:12px;text-align:left;padding:12px 13px;border:1px solid var(--line);border-radius:11px;background:var(--surface);color:var(--muted);width:100%;min-width:0}
+.ambient-sound>span{min-width:0;flex:1}.ambient-sound strong{display:block;color:var(--text);font-size:13px;font-weight:600}.ambient-sound small{display:block;font-size:11px;line-height:1.7;margin-top:3px}
+.ambient-sound>svg{flex-shrink:0}.ambient-sound.selected{border-color:var(--green);background:var(--mint);color:var(--green-dark);box-shadow:0 3px 14px var(--glow)}
+.ambient-sound:hover{border-color:var(--green)}.ambient-sound>i{width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0}
+.ambient-play-row{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin:18px 0}
+.ambient-play{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:41px;border:1px solid transparent;border-radius:10px;background:var(--green-dark);color:#fff;font-size:12px;font-weight:600;padding:9px 14px}
+:root[data-theme=dark] .ambient-play{background:var(--green);color:var(--bg)}
+.ambient-play:hover{box-shadow:0 3px 18px var(--glow)}
+.ambient-mute,.ambient-icon-button{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;min-height:38px;width:38px;border-radius:9px;border:1px solid var(--line);background:var(--surface);color:var(--text)}
+.ambient-mute:hover,.ambient-icon-button:hover{background:var(--mint);border-color:var(--green)}
+.ambient-status{font-size:11px;color:var(--muted);line-height:1.8;flex-basis:100%;overflow-wrap:anywhere}
+.ambient-status.is-playing{color:var(--green-dark)}
+.ambient-volume-label{display:flex;align-items:center;justify-content:space-between;gap:14px;font-size:12px;color:var(--text);margin:0 0 8px}
+.ambient-volume-label output{font-size:11px;font-variant-numeric:tabular-nums;color:var(--muted)}
+.ambient-range{width:100%;min-width:0;height:26px;display:block;accent-color:var(--green);cursor:pointer;margin:0}
+.ambient-range:focus-visible{outline:2px solid var(--green);outline-offset:3px;border-radius:5px}
+.ambient-alarm{margin-top:20px;padding-top:18px;border-top:1px solid var(--line)}
+.ambient-alarm>p,.ambient-remember{font-size:11px;color:var(--muted);line-height:1.9;margin-top:8px}
+.ambient-remember{margin-top:16px}
+.ambient-credits{border-top:1px solid var(--line);margin-top:18px;padding-top:12px;font-size:11px;color:var(--muted);line-height:1.9}
+.ambient-credits summary{cursor:pointer;padding:4px 0;color:var(--text)}
+.ambient-credits summary:focus-visible{outline:2px solid var(--green);outline-offset:4px;border-radius:4px}
+.ambient-credits ul{list-style:none;margin:12px 0;padding:0;display:grid;gap:9px}.ambient-credits li>strong{display:block;color:var(--text);font-size:12px}
+.ambient-credits a{color:var(--green-dark);text-decoration:underline;text-underline-offset:3px}.ambient-credits>p{margin-top:7px}
+.ambient-dialog{position:fixed;inset:0;margin:auto;padding:23px;width:min(460px,calc(100% - 32px));max-height:85dvh;overflow:auto;border:1px solid var(--line);border-radius:18px;background:var(--surface);color:var(--text);box-shadow:0 15px 70px #00000030}
+.ambient-dialog::backdrop{background:#040b1099;backdrop-filter:blur(5px)}
+.ambient-dialog-heading{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.ambient-dialog-heading h2{display:flex;align-items:center;gap:9px;font-size:18px;font-weight:650;margin:0!important;color:var(--text);letter-spacing:-.3px}
+.ambient-dialog-heading h2 svg{color:var(--green)}.ambient-dialog .ambient-credits{font-size:12px}
+.timer-ambient-button{display:grid;place-items:center;position:relative;min-width:36px;height:38px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--text)}
+.timer-ambient-button.is-playing{color:var(--green-dark);border-color:var(--green)}
+.timer-ambient-button>i{position:absolute;right:4px;top:4px;width:4px;height:4px;background:var(--green);border-radius:50%}
+.ambient-dock{position:fixed;z-index:50;bottom:18px;right:24px;width:min(430px,calc(100% - 32px));display:flex;align-items:center;gap:9px;padding:11px 12px;border:1px solid color-mix(in srgb,var(--green) 30%,var(--line));border-radius:15px;background:var(--surface);box-shadow:0 8px 40px #00000020,0 0 20px var(--glow)}
+.ambient-dock-art{width:36px;height:38px;display:grid;place-items:center;flex-shrink:0;border-radius:10px;background:var(--bg);color:var(--muted)}
+.ambient-dock-art.is-playing{background:var(--mint);color:var(--green-dark)}
+.ambient-dock-info{flex:1;min-width:0}.ambient-dock-info strong{display:block;font-size:12px;font-weight:650}.ambient-dock-info>span{display:block;font-size:10px;color:var(--muted);line-height:1.7;overflow-wrap:anywhere;margin-top:2px}
+.ambient-dock-play{display:grid;place-items:center;min-width:38px;height:38px;border:0;border-radius:10px;background:var(--mint);color:var(--green-dark)}
+.ambient-dock .ambient-icon-button{border-color:transparent;width:32px;min-width:32px;background:transparent}
+body:has(.ambient-dock){padding-bottom:110px}
+@media(max-width:740px){.ambient-panel{padding:19px}.ambient-dock{right:16px;bottom:max(12px,env(safe-area-inset-bottom));gap:6px;padding:10px}.ambient-dock-art{width:32px}.ambient-dock-info>span{font-size:10px}.ambient-dialog{padding:20px}}
+@media(max-width:460px){.focus-actions{gap:5px}.timer-ambient-button{min-width:31px;width:31px}.timer-sound-button{width:31px}.fullscreen-button{padding:7px}.ambient-dock .ambient-icon-button{width:28px;min-width:28px}.ambient-dock-play{min-width:35px;width:35px}.ambient-dock-art{display:none}}
+@media(max-height:500px){.ambient-dialog{max-height:88dvh}.ambient-dialog .ambient-sounds{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.ambient-dialog .ambient-sound{flex-direction:column;gap:5px;padding:9px 6px;text-align:center}.ambient-dialog .ambient-sound small,.ambient-dialog .ambient-sound>i{display:none}}
+@media(prefers-reduced-motion:reduce){.ambient-controls *,.ambient-dock *{transition:none!important;animation:none!important}}

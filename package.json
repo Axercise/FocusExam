@@ -1,0 +1,43 @@
+{
+  "name": "focusexam",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "check:supabase": "node scripts/check-supabase.mjs",
+    "test:account": "node --test scripts/account-security.test.mjs",
+    "test:tracks": "node --test scripts/tracks.test.mjs",
+    "test:timer": "node --test scripts/timer.test.mjs",
+    "test:statistics": "node --test scripts/statistics.test.mjs",
+    "test:goals": "node --test scripts/goals.test.mjs",
+    "test:ambient": "node --test scripts/ambient.test.mjs",
+    "test:streak": "node --test scripts/streak.test.mjs scripts/streak-database.test.mjs",
+    "test:track-detail": "node --test scripts/track-detail-database.test.mjs",
+    "test:cosmetics": "node --test scripts/cosmetics-database.test.mjs",
+    "test:rewards": "node --test scripts/study-rewards-database.test.mjs"
+  },
+  "dependencies": {
+    "@supabase/ssr": "0.12.7",
+    "@supabase/supabase-js": "2.119.0",
+    "lucide-react": "latest",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "server-only": "0.0.1"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.5.15",
+    "@tailwindcss/postcss": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest"
+  }
+}

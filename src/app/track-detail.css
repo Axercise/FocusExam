@@ -1,0 +1,35 @@
+.track-detail-heading{display:flex;align-items:center;gap:20px;margin-bottom:28px}
+.track-detail-heading>div{flex:1;min-width:0}.track-detail-heading h1{font-size:clamp(26px,4vw,36px);line-height:1.35;overflow-wrap:anywhere;margin:5px 0 8px;letter-spacing:-.8px}
+.track-detail-heading p{max-width:650px;color:var(--muted);font-size:13px;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.8}
+.track-detail-icon{width:70px;height:70px;border-radius:21px}
+.track-archive-banner{display:flex;align-items:center;flex-wrap:wrap;gap:9px;padding:14px 17px;margin-bottom:24px;border:1px solid var(--line);border-radius:12px;color:var(--muted);background:var(--surface);font-size:12px}.track-archive-banner strong{color:var(--text);font-weight:600}
+.track-detail-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;margin-bottom:25px}
+.track-detail-summary article{padding:20px;min-width:0}.track-detail-summary article>div{display:flex;align-items:center;justify-content:space-between;gap:8px;color:var(--muted)}
+.track-detail-summary p{font-size:12px}.track-detail-summary svg{color:var(--green);flex-shrink:0;opacity:.8}
+.track-detail-summary strong{display:block;margin:13px 0 8px;font-size:clamp(20px,2.6vw,28px);font-weight:650;letter-spacing:-.6px;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.track-detail-summary small{display:block;color:var(--muted);font-size:11px;line-height:1.7}
+.track-detail-summary article:first-child{border-color:color-mix(in srgb,var(--green) 30%,var(--line));background:radial-gradient(ellipse at 0 0,var(--glow),transparent 75%),var(--surface)}
+.track-detail-page .statistics-form label{max-width:320px}.track-period-total{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:24px}
+.track-period-total>span{color:var(--muted);font-size:12px}.track-period-total>strong{font-size:24px;font-weight:650;font-variant-numeric:tabular-nums;letter-spacing:-.7px}
+.track-chart-empty{font-size:12px;color:var(--muted);text-align:center;padding:10px;margin-bottom:12px}
+.track-detail-history{scroll-margin-top:26px;margin-top:40px}.track-history-heading{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:20px}
+.track-history-heading h2{display:flex;align-items:center;flex-wrap:wrap;gap:10px;font-size:22px;font-weight:650;margin:5px 0}.track-history-heading h2 small{font-size:11px;font-weight:500;color:var(--muted);border:1px solid var(--line);border-radius:15px;padding:3px 9px}
+.track-history-heading p{font-size:12px;color:var(--muted)}.track-history-tabs{display:flex;align-items:center;gap:5px;padding:4px;border:1px solid var(--line);background:var(--surface);border-radius:11px;flex-shrink:0}
+.track-history-tabs a{font-size:12px;color:var(--muted);padding:8px 12px;border-radius:7px}.track-history-tabs a[aria-current=page]{color:var(--green-dark);background:var(--mint);font-weight:600}
+.track-session-list{display:grid;gap:15px}.track-session{padding:24px;min-width:0}.track-session-top{display:flex;align-items:flex-start;justify-content:space-between;gap:22px}.track-session-top>div:first-child{min-width:0}
+.track-session-mode{display:inline-block;padding:3px 8px;border:1px solid var(--line);border-radius:6px;color:var(--green-dark);font-size:10px;font-weight:600;background:var(--mint);margin-bottom:10px}
+.track-session h3{display:flex;gap:7px;align-items:flex-start;font-size:14px;font-weight:600;line-height:1.7;overflow-wrap:anywhere}.track-session h3 svg{flex-shrink:0;margin-top:4px;color:var(--muted)}
+.track-session-top p{color:var(--muted);font-size:11px;margin-top:5px;overflow-wrap:anywhere;line-height:1.8}
+.track-session-duration{display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex-shrink:0}.track-session-duration small,.track-session-duration span{color:var(--muted);font-size:11px}.track-session-duration strong{font-size:23px;font-weight:650;font-variant-numeric:tabular-nums;letter-spacing:-.5px}
+.track-session-recap{padding-top:16px;margin-top:17px;border-top:1px solid var(--line)}.track-session-recap h4{display:flex;align-items:center;gap:6px;color:var(--muted);font-size:11px;font-weight:500;margin:0 0 9px}
+.track-session-recap p{font-size:13px;line-height:1.9;white-space:pre-wrap;overflow-wrap:anywhere}.track-session-recap p.is-empty{color:var(--muted);font-size:12px}
+.track-title-link:hover{color:var(--green-dark);text-decoration:underline;text-underline-offset:4px}.track-open-detail{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:9px;margin:0 0 14px;color:var(--green-dark);font-size:12px;font-weight:600;transition:background .2s,border-color .2s}
+.track-open-detail:hover{background:var(--mint);border-color:var(--green)}
+.personal-track-card{position:relative;isolation:isolate;cursor:pointer}
+.personal-track-card .track-title-link::after{content:"";position:absolute;inset:0;z-index:1;border-radius:17px}
+.personal-track-card .track-title-link:focus-visible{outline:none}
+.personal-track-card .track-title-link:focus-visible::after{outline:3px solid var(--green);outline-offset:4px}
+.personal-track-card .track-open-detail,.personal-track-card .track-card-button,.personal-track-card .track-archive-form{position:relative;z-index:2}
+@media(max-width:850px){.track-detail-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.track-history-heading{align-items:flex-start;flex-direction:column;gap:15px}.track-detail-heading{display:grid;grid-template-columns:70px minmax(0,1fr);align-items:start;gap:16px 20px}.track-detail-heading>.track-secondary{grid-column:2;justify-self:start;margin-left:0}}
+@media(max-width:580px){.track-detail-heading{grid-template-columns:52px minmax(0,1fr);gap:14px}.track-detail-icon{width:52px;height:52px;border-radius:16px}.track-detail-heading h1{font-size:27px}.track-detail-summary{gap:10px}.track-detail-summary article{padding:16px 13px}.track-detail-summary strong{font-size:21px}.track-detail-summary p{font-size:11px}.track-detail-summary svg{width:15px}.track-period-total{align-items:flex-start;flex-direction:column;gap:6px}.track-history-tabs{width:100%}.track-history-tabs a{flex:1;text-align:center}.track-session{padding:19px 16px}.track-session-top{flex-direction:column;gap:15px}.track-session-duration{align-items:flex-start}.track-session h3{font-size:13px}.track-session-recap p{font-size:12px}.track-detail-page .statistics-form label{max-width:none}}
+@media(prefers-reduced-motion:reduce){.track-open-detail{transition:none}}
